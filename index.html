@@ -23,8 +23,11 @@
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   </head>
-  <body class="min-h-screen bg-slate-50 font-sans antialiased">
+  <body class="flex min-h-screen flex-col bg-[#F6F6FB] font-['Inter']" class="min-h-screen bg-slate-50 font-sans antialiased">
     <div class="mx-auto flex max-w-screen flex-col px-6 py-8">
       <!-- Navigation -->
       <header
@@ -141,5 +144,60 @@
     
       </section>
     </main>
+    <section class="flex flex-col items-center justify-start">
+      <!-- white box -->
+      <div class="bg-white w-[70vw] h-[666px] flex flex-col justify-evenly items-center border-white rounded-xl">
+        <div class="flex flex-col justify-center items-center gap-5">
+          <p class="text-[44px] text-[#1A1A2C] font-bold">Get in Touch</p>
+          
+          <div class="flex flex-col w-[589px] gap-5">
+            <div>
+              <label for="name" class="text-[16px] text-[#5F5F76]">Name</label><br>
+              <input id="name" type="text" placeholder="John Doe" class="h-[48px] w-full border border-[#E0E0ED] rounded-xl p-5">
+            </div>
+          
+            <div>
+              <label for="email" class="text-[16px] text-[#5F5F76]">Email</label><br>
+              <input id="email" type="email" placeholder="john@example.com" class="h-[48px] w-full border border-[#E0E0ED] rounded-xl p-5">
+            </div>
+          
+            <div>
+              <label for="message" class="text-[16px] text-[#5F5F76]">Message</label><br>
+              <textarea id="message" placeholder="Your message..." class="h-[102px] w-full border border-[#E0E0ED] rounded-xl p-5 align-top resize-none"></textarea>
+            </div>
+          </div>
+          </div>
+
+        <button class="w-[589px] h-[56px] bg-[#1A1A2C] text-white rounded-xl">Submit</button>
+      </div>
+    
+    </section>
+
+    <!-- Footer Section: place after all other sections, before end of body -->
+    <footer class="mt-auto w-full px-8 py-10">
+      <div class="mx-auto flex w-[70vw] max-w-full flex-col items-center justify-between gap-6 md:flex-row">
+        <p class="text-base font-normal text-[#5F5F76]">
+          Acme productivity app ©2024
+        </p>
+
+        <nav aria-label="Footer navigation">
+          <ul class="flex flex-wrap items-center justify-center gap-8">
+            <li>
+              <a href="#" class="text-base font-bold text-[#1A1A2C] hover:underline">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-bold text-[#1A1A2C] hover:underline">Terms</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-bold text-[#1A1A2C] hover:underline">AI Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-bold text-[#1A1A2C] hover:underline">Pricing</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
   </body>
 </html>
