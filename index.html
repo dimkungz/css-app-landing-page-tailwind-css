@@ -27,11 +27,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   </head>
-  <body class="min-h-screen bg-slate-50 font-sans antialiased">
-    <div class="mx-auto flex min-h-screen w-screen flex-col px-20 py-8">
+  <body class=" bg-slate-50 font-sans antialiased">
+    <div class="mx-auto flex w-screen flex-col px-4 py-8 md:px-20">
       <!-- Navigation -->
       <header
-        class="flex items-center justify-between rounded-full border border-slate-100 bg-white px-16 py-4 shadow-sm"
+        class="relative flex items-center justify-between rounded-full border border-slate-100 bg-white px-6 py-4 shadow-sm sticky top-[32px] md:px-16"
       >
         <a href="#" class="text-xl font-bold tracking-tight text-slate-900 relative">
           Acme<span
@@ -39,7 +39,54 @@
             aria-hidden="true"
           ></span>
         </a>
-        <nav class="flex items-center gap-8 text-sm font-medium">
+
+        <!-- Hamburger: visible on phones, hidden from md up -->
+        <button
+          type="button"
+          id="nav-toggle"
+          class="inline-flex items-center justify-center rounded-lg p-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <svg class="h-6 w-6" id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg class="hidden h-6 w-6" id="nav-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Desktop nav -->
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Main navigation">
+          <a
+            href="#"
+            class="border-b-2 border-purple-600 pb-0.5 text-purple-600"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-slate-900"
+            >Features</a
+          >
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-slate-900"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-slate-900"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile dropdown -->
+        <nav
+          id="mobile-nav"
+          class="absolute left-0 right-0 top-full z-50 mt-2 hidden flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 text-sm font-medium shadow-lg md:hidden"
+          aria-label="Main navigation"
+        >
           <a
             href="#"
             class="border-b-2 border-purple-600 pb-0.5 text-purple-600"
@@ -199,5 +246,7 @@
       </div>
     </footer>
     <!-- End Footer Section -->
+
+    
   </body>
 </html>
